@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: glaze
+    runtime: docker
+    plan: free
+    envVars:
+      - key: QWEN_API_KEY
+        sync: false
+      - key: GLAZE_PASSWORD
+        sync: false
+    disk:
+      name: glaze-data
+      mountPath: /app/data
+      sizeGB: 1
